@@ -22,6 +22,22 @@ npm install
   * 可以使用 Metamask 的 provider
   * 或者自定义配置 `rpcEndpoint`
 - 设置 Uniswap 的 `routerAddress`
+```javascript
+    // 初始化 provider
+    const provider = new ethers.providers.JsonRpcProvider('https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID');
+
+    // 初始化 wallet
+    const privateKey = 'YOUR_PRIVATE_KEY';
+    const wallet = new ethers.Wallet(privateKey, provider);
+
+    // Uniswap V2 Router 地址
+    const uniswapRouterAddress = '0x1234567890123456789012345678901234567890';
+
+    // 初始化 Uniswap 实例
+    const uniswap = new Uniswap(provider, uniswapRouterAddress);
+
+```
+
 
 ### Raydium 配置
 
@@ -29,6 +45,16 @@ npm install
 
 - 配置 Solana 的 `rpcEndpoint`
 - 设置目标交易池的 `poolId`
+```javascript
+    // 初始化 RPC 端点
+    const rpcEndpoint = 'https://api.mainnet-beta.solana.com';
+
+    // 初始化 wallet
+    const wallet = Keypair.generate();
+
+    // 初始化 Raydium 实例
+    const raydium = new Raydium(rpcEndpoint, '58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2');
+```
 
 ## 打开用户界面
 
