@@ -41,7 +41,7 @@ npm start
 ## 测试
 
 ```bash
-npm test-lib
+npm run test-lib
 ```
 
 ## 跨链扩展
